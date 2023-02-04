@@ -16,8 +16,8 @@ pydantic = "^1.10.4"
 [package.source]
 type = "git"
 url = "https://github.com/aoirint/id3py.git"
-reference = "2e8ada5d86bbb749ed18efab98cebccab5a736c5"
-resolved_reference = "2e8ada5d86bbb749ed18efab98cebccab5a736c5"
+reference = "ef8b1505d9da17c516b120cd631141193981dc27"
+resolved_reference = "ef8b1505d9da17c516b120cd631141193981dc27"
 
 [[package]]
 name = "attrs"
@@ -209,4 +209,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "d558bebde2e9dc32d5f572bf7834b73af9a77197c069bf92b2d5a2101568b358"
+content-hash = "2f79da74e0c093e0a1ca3cfcf46472f89c12da284102df8e42c743e0cb061556"

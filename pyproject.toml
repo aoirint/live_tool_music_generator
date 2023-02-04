@@ -4,10 +4,11 @@ version = "0.0.0"
 description = ""
 authors = ["aoirint <aoirint@gmail.com>"]
 readme = "README.md"
-packages = [{include = "live_tool_music_generator"}]
+packages = [{include = "."}]
 
 [tool.poetry.dependencies]
 python = "~3.9"
+aoirint-id3 = {git = "https://github.com/aoirint/id3py.git", rev = "2e8ada5d86bbb749ed18efab98cebccab5a736c5"}
 
 
 [tool.poetry.group.dev.dependencies]

@@ -39,13 +39,12 @@ def load_music(music_file: Path) -> Music:
   year: Optional[str] = None
 
   id3_versions = detect_id3_versions(data=music_bytes)
-  if 'ID3v1' in id3_versions:
-    result = decode_id3v1(data=music_bytes[-128:], encoding='latin-1')
+  if 'ID3v2.2' in id3_versions:
+    result = decode_id3v2_2(data=music_bytes)
     name = result.title
     artist = result.artist
     album = result.album
-    genre_number = result.genre_number
-    genre = genre_dict.get(genre_number)
+    # TODO: genre
     year = result.year
   elif 'ID3v1.1' in id3_versions:
     result = decode_id3v1_1(data=music_bytes[-128:], encoding='latin-1')
@@ -55,12 +54,13 @@ def load_music(music_file: Path) -> Music:
     genre_number = result.genre_number
     genre = genre_dict.get(genre_number)
     year = result.year
-  elif 'ID3v2.2' in id3_versions:
-    result = decode_id3v2_2(data=music_bytes)
+  elif 'ID3v1' in id3_versions:
+    result = decode_id3v1(data=music_bytes[-128:], encoding='latin-1')
     name = result.title
     artist = result.artist
     album = result.album
-    # TODO: genre
+    genre_number = result.genre_number
+    genre = genre_dict.get(genre_number)
     year = result.year
 
   return Music(

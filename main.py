@@ -1,5 +1,6 @@
 from pathlib import Path
 from dataclasses import dataclass
+from aoirint_id3 import detect_id3_versions
 
 
 @dataclass
@@ -33,7 +34,7 @@ def load_music(music_file: Path) -> Music:
 
 
 def load_playlist(playlist_dir: Path) -> Playlist:
-  music_files = list(map(lambda path: path.is_file(), playlist_dir.iterdir()))
+  music_files = list(filter(lambda path: path.is_file(), playlist_dir.iterdir()))
 
   musics = list[Music]
   for music_file in music_files:
@@ -46,7 +47,7 @@ def load_playlist(playlist_dir: Path) -> Playlist:
 
 
 def load_playlists(playlists_dir: Path) -> list[Playlist]:
-  playlist_dirs = list(map(lambda path: path.is_dir(), playlists_dir.iterdir()))
+  playlist_dirs = list(filter(lambda path: path.is_dir(), playlists_dir.iterdir()))
 
   if len(playlist_dirs) == 0:
       default_playlist_dir = playlists_dir / 'default'

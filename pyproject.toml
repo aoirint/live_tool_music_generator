@@ -8,7 +8,7 @@ packages = [{include = "."}]
 
 [tool.poetry.dependencies]
 python = "~3.9"
-aoirint-id3 = {git = "https://github.com/aoirint/id3py.git", rev = "71f75bd48edd9eb8112a6b048888053a0a36943a"}
+aoirint-id3 = {git = "https://github.com/aoirint/id3py.git", rev = "ad4741a08ba0caa6791bfdf28c721be60076cd58"}
 
 
 [tool.poetry.group.dev.dependencies]

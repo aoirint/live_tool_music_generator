@@ -1,4 +1,4 @@
-aoirint-id3 @ git+https://github.com/aoirint/id3py.git@71f75bd48edd9eb8112a6b048888053a0a36943a ; python_version >= "3.9" and python_version < "3.10"
+aoirint-id3 @ git+https://github.com/aoirint/id3py.git@ad4741a08ba0caa6791bfdf28c721be60076cd58 ; python_version >= "3.9" and python_version < "3.10"
 attrs==22.2.0 ; python_version >= "3.9" and python_version < "3.10"
 colorama==0.4.6 ; python_version >= "3.9" and python_version < "3.10" and sys_platform == "win32"
 exceptiongroup==1.1.0 ; python_version >= "3.9" and python_version < "3.10"

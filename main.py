@@ -1,6 +1,6 @@
 from pathlib import Path
 from dataclasses import dataclass
-from aoirint_id3 import detect_id3_versions, decode_id3v1, decode_id3v1_1, decode_id3v2_2
+from aoirint_id3 import detect_id3_versions, decode_id3v1, decode_id3v1_1, decode_id3v2_2, decode_id3v2_3
 from aoirint_id3.id3v1_1 import available_genres
 from typing import Optional
 
@@ -39,7 +39,14 @@ def load_music(music_file: Path) -> Music:
   year: Optional[str] = None
 
   id3_versions = detect_id3_versions(data=music_bytes)
-  if 'ID3v2.2' in id3_versions:
+  if 'ID3v2.3' in id3_versions:
+    result = decode_id3v2_3(data=music_bytes)
+    name = result.title
+    artist = result.artist
+    album = result.album
+    # TODO: genre
+    year = result.year
+  elif 'ID3v2.2' in id3_versions:
     result = decode_id3v2_2(data=music_bytes)
     name = result.title
     artist = result.artist

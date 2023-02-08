@@ -1,3 +1,3 @@
-aoirint-id3 @ git+https://github.com/aoirint/id3py.git@2e8ada5d86bbb749ed18efab98cebccab5a736c5 ; python_version >= "3.9" and python_version < "3.10"
+aoirint-id3 @ git+https://github.com/aoirint/id3py.git@71f75bd48edd9eb8112a6b048888053a0a36943a ; python_version >= "3.9" and python_version < "3.10"
 pydantic==1.10.4 ; python_version >= "3.9" and python_version < "3.10"
 typing-extensions==4.4.0 ; python_version >= "3.9" and python_version < "3.10"
